@@ -1,0 +1,23 @@
+#!/bin/bash
+#don't put this inside of the DocumentRoot. Bad things can happen
+cd YOURPATH_THAT_CONTAINS_INDEX.PHP
+touch last_check
+
+if [ -e ip2nation.zip ]
+then
+	rm -rf ip2nation.zip
+	rm -rf ip2nation.sql
+fi
+wget -q http://www.ip2nation.com/ip2nation/Download -O ip2nation.zip
+
+if [ -e banlist.txt ]
+then 
+	rm -rf banlist.txt
+fi
+
+wget -q https://www.trustedsec.com/banlist.txt
+
+unzip -qq ip2nation.zip
+
+mysql -u daily_threat_vis -pxxxxx daily_threat_vis < ip2nation.sql
+
