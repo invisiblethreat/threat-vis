@@ -17,7 +17,7 @@ at [InvisibleThreat][2]. This generates the page on the fly, but modifications c
 made to generate a static page each day via cron.
 
 [1]: https://www.trustedsec.com/downloads/artillery/ "Artillery Project"
-[2]: http://www.invisiblethreat.ca/daily_threat_vis/ "InvisibleThreat"
+[2]: https://www.invisiblethreat.ca/daily_threat_vis/ "InvisibleThreat"
 
 Future Improvements
 -------------------
